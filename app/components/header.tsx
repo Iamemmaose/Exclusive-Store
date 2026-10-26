@@ -29,12 +29,12 @@ export default function Header() {
 
     return (
         <header className="fixed flex flex-col border border-gray-100 border-b-gray-300 w-full">
-            <div className="relative flex justify-center items-center px-2 py-2 bg-black text-white capitalize">
+            <div className="relative flex justify-center items-center px-2 py-2 bg-black text-white capitalize bg-black">
                 <p className="text-center">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span><Button variant="link" href="/shop" className="text-white underline after:bottom-2">ShopNow</Button></span></p>
             </div>
 
             {showMenu &&
-                <div className={`absolute top-17 min-[605px]:top-13 left-0 z-50 max-w-[85vw] w-0 min-h-screen bg-white p-5 shadow-xl transition-[width] duration-300 ease-in-out min-[1022px]:hidden ${showMenu && "w-70"}`} aria-hidden={!showMenu} inert={!showMenu} aria-label="mobile menu navigation">
+                <div className={`absolute top-17 min-[605px]:top-13 left-0 z-50 max-w-[85vw] w-0 min-h-screen bg-white text-black backdrop-blur p-5 shadow-xl transition-[width] duration-300 ease-in-out min-[1022px]:hidden ${showMenu && "w-70"}`} aria-hidden={!showMenu} inert={!showMenu} aria-label="mobile menu navigation">
                     <div className="flex justify-between items-center mb-4">
                         <Link href="/" aria-label="Exclusive Home">
                             <span className="text-2xl font-bold">Exclusive</span>
@@ -52,7 +52,7 @@ export default function Header() {
                     </nav>
                 </div>}
 
-            <div className="flex justify-between items-center px-10 py-5">
+            <div className="flex justify-between items-center px-10 py-5 bg-white text-black">
                 <div className="relative flex justify-between items-center gap-5 xl:gap-30 shrink-0">
                     <div onClick={handleShowMenu} className="flex min-[1022px]:hidden" aria-label="menu icon">
                         {!showMenu && <CiMenuBurger size={24} />}
